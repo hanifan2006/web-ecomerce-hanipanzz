@@ -1,0 +1,33 @@
+:root{--primary:#1a56db;--font:'Plus Jakarta Sans',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:#f1f5f9;min-height:100vh}
+.auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.auth-card{background:#fff;border-radius:16px;padding:40px;width:100%;max-width:420px;box-shadow:0 8px 32px rgba(15,23,42,.12);border:1px solid #e2e8f0}
+.auth-brand{font-size:28px;font-weight:800;color:#1a56db;margin-bottom:8px}
+.auth-brand span{color:#0f172a}
+.auth-card h1{font-size:22px;margin-bottom:6px}
+.auth-card p{color:#64748b;font-size:14px;margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:13px;font-weight:500;margin-bottom:5px;color:#475569}
+.input{width:100%;padding:10px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-family:inherit;font-size:14px}
+.input:focus{outline:none;border-color:#1a56db;box-shadow:0 0 0 3px rgba(26,86,219,.1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn-primary{background:#1a56db;color:#fff;width:100%}
+.btn-primary:hover{background:#1245b0}
+.btn-block{width:100%}
+.form-check{margin-bottom:14px;font-size:13px}
+.auth-links{display:flex;justify-content:space-between;margin-top:16px;font-size:13px}
+.auth-links a{color:#1a56db;text-decoration:none}
+.auth-demo{margin-top:20px;padding:12px;background:#f8fafc;border-radius:8px;font-size:12px;color:#64748b;line-height:1.6}
+.role-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.role-tab{border:1.5px solid #e2e8f0;border-radius:8px;padding:12px 10px;cursor:pointer;text-align:center;background:#fff;font-family:inherit;transition:all .18s}
+.role-tab:hover{border-color:#1a56db}
+.role-tab.active{border-color:#1a56db;background:#eff4ff}
+.role-tab .rt-name{font-weight:700;font-size:13px;color:#0f172a}
+.role-tab .rt-sub{font-size:11px;color:#94a3b8;margin-top:2px}
+.role-tab.active .rt-name{color:#1a56db}
+.auth-demo code{background:#e2e8f0;padding:1px 5px;border-radius:4px;font-size:11px}
+.alert{padding:10px 14px;border-radius:8px;margin-bottom:14px;font-size:13px}
+.alert-danger{background:#fee2e2;color:#991b1b}
+.alert-success{background:#d1fae5;color:#065f46}
+.alert-info{background:#dbeafe;color:#1e40af}

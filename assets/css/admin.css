@@ -1,0 +1,31 @@
+.content-header h1{font-weight:700}
+.nav-sidebar .nav-link.active{background:#007bff!important}
+.badge-purple{background:#6f42c1;color:#fff}
+.btn-xs{padding:2px 8px;font-size:11px}
+.badge{display:inline-block;padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.badge-blue{background:#dbeafe;color:#1d4ed8}
+.badge-green{background:#d1fae5;color:#065f46}
+.badge-red{background:#fee2e2;color:#991b1b}
+.badge-amber{background:#fef3c7;color:#92400e}
+.badge-gray{background:#f1f5f9;color:#475569}
+
+/* ADMIN ENHANCEMENTS */
+.main-sidebar{background:linear-gradient(135deg, #667eea 0%, #764ba2 100%)}
+.main-header{box-shadow:0 2px 8px rgba(0,0,0,.08);border-bottom:2px solid #f0f0f0}
+.brand-link{background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);border-bottom:2px solid rgba(255,255,255,.1)}
+.nav-sidebar .nav-link{color:#e8e8e8;transition:all .3s}
+.nav-sidebar .nav-link:hover{background:rgba(255,255,255,.1);color:#fff;padding-left:1.5rem}
+.nav-sidebar .nav-link.active{background:linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);color:#fff;border-left:4px solid #fbbf24}
+.small-box{border-top:3px solid #007bff;box-shadow:0 2px 12px rgba(0,0,0,.08);border-radius:8px;transition:transform .3s, box-shadow .3s}
+.small-box:hover{transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,.12)}
+.card{border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.card-header{background:linear-gradient(90deg, #667eea 0%, #764ba2 100%);color:#fff;border:none;font-weight:600}
+.card-body{padding:1.5rem}
+.btn-primary{background:linear-gradient(90deg, #667eea 0%, #764ba2 100%);border:none;transition:all .3s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(102, 126, 234, 0.4)}
+.btn-success{background:#10b981;border:none}
+.btn-success:hover{background:#059669}
+.btn-danger{background:#ef4444;border:none}
+.btn-danger:hover{background:#dc2626}
+.table-hover tbody tr:hover{background:#f9fafb;cursor:pointer}
+.main-footer{background:#f8f9fa;border-top:1px solid #e5e7eb;color:#6b7280}
