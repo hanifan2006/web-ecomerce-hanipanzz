@@ -23,7 +23,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://web-ecommerce-hanipanzz-53xwood11t-hanifan.vercel.app/';
+$config['base_url'] = '/';
+if (defined('STDIN') === FALSE && !empty($_SERVER['HTTP_HOST'])) {
+	$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+} elseif (defined('STDIN')) {
+	$config['base_url'] = 'http://localhost/eccomerce-main/';
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -326,7 +331,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/userguide3/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'n3v3rG0nn4G1v3Y0uUpL3t5M4k31tS3cur3';
 
 /*
 |--------------------------------------------------------------------------
@@ -383,11 +388,11 @@ $config['encryption_key'] = '';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver'] = 'files';
+$config['sess_driver'] = 'database';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_samesite'] = 'Lax';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = sys_get_temp_dir() . '/ci_sessions/';
+$config['sess_save_path'] = 'ci_sessions';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
@@ -405,7 +410,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 | 'cookie_samesite' = Cookie's samesite attribute (Lax, Strict or None)
 |
 | Note: These settings (with the exception of 'cookie_prefix' and
-|       'cookie_httponly') will also affect sessions.
+|        'cookie_httponly') will also affect sessions.
 |
 */
 $config['cookie_prefix']	= '';
@@ -457,7 +462,7 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection'] = FALSE;
+$config['csrf_protection'] = TRUE;
 $config['csrf_token_name'] = 'laptopku_csrf';
 $config['csrf_cookie_name'] = 'laptopku_csrf_cookie';
 $config['csrf_expire'] = 7200;
@@ -529,4 +534,4 @@ $config['rewrite_short_tags'] = FALSE;
 | Comma-separated:	'10.0.1.200,192.168.5.0/24'
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
-$config['proxy_ips'] = '';
+$config['proxy_ips'] = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
