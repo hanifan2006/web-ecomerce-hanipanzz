@@ -73,16 +73,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+// Deteksi environment
+$is_production = isset($_SERVER['VERCEL']) || isset($_SERVER['VERCEL_ENV']);
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'laptopku_db',
+	'hostname' => $is_production ? getenv('DB_HOST') : 'localhost',
+	'username' => $is_production ? getenv('DB_USER') : 'root',
+	'password' => $is_production ? getenv('DB_PASS') : '',
+	'database' => $is_production ? getenv('DB_NAME') : 'laptopku_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => ($is_production ? FALSE : TRUE),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
