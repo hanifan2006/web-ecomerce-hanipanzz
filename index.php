@@ -97,7 +97,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = __DIR__ . '/system';
+$system_path = __DIR__ . '/system';
 /*
  *---------------------------------------------------------------
  * APPLICATION DIRECTORY NAME
@@ -113,7 +113,14 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = __DIR__ . '/application';
+$application_folder = __DIR__ . '/application';
+
+// Deteksi environment secara otomatis
+if (isset($_SERVER['VERCEL_ENV']) || isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL'])) {
+    // Di Vercel, path tetap sama
+    $system_path = __DIR__ . '/system';
+    $application_folder = __DIR__ . '/application';
+}
 /*
  *---------------------------------------------------------------
  * VIEW DIRECTORY NAME
